@@ -3,13 +3,13 @@
 #
 # Options:
 #
-# -a active 
-# -a accepted
-# -a handled 
-# -a requests
-# -a reading
-# -a writting
-# -a waiting
+# -a "accepted conn"
+# -a "max listen queue"
+# -a "listen queue len"
+# -a "idle processes"
+# -a "active processes"
+# -a "total processes"
+# -a "slow requests"
 #
 
 import simplejson as json
@@ -19,7 +19,7 @@ import re
 ##
 
 def Usage ():
-        print "Usage: getPhpInfo.py -h 127.0.0.1 -P 80 -a [active|accepted|handled|request|reading|writting|waiting]"
+        print "Usage: getPhpInfo.py -h 127.0.0.1 -p 80 -a [accepted conn|max listen queue|listen queue len|idle processes|active processes|total processes|slow requests]"
         sys.exit(2)
 
 ##
