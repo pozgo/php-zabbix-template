@@ -19,7 +19,7 @@ import re
 ##
 
 def Usage ():
-        print "Usage: getPhpInfo.py -h 127.0.0.1 -P 80 -a [active|accepted|handled|request|reading|writting|waiting]"
+        print("Usage: getPhpInfo.py -h 127.0.0.1 -P 80 -a [active|accepted|handled|request|reading|writing|waiting]")
         sys.exit(2)
 
 ##
@@ -54,9 +54,9 @@ def main ():
         result = urllib2.urlopen(request)
         buffer = json.loads(result.read())
     except:
-        print "-1"
+        print("-1")
         sys.exit(1)
-    print buffer.pop(getInfo,'unknown')
+    print(buffer.pop(getInfo,'unknown'))
     sys.exit(0)
 
 if __name__ == "__main__":
